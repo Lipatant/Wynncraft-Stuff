@@ -1,0 +1,19 @@
+{
+  "name": "wynncraft-stuff",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lipatant/Wynncraft-Stuff.git"
+  },
+  "author": "Virgile (Lipatant)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lipatant/Wynncraft-Stuff/issues"
+  },
+  "homepage": "https://github.com/Lipatant/Wynncraft-Stuff#readme"
+}
