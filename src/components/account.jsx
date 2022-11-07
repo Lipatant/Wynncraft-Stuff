@@ -67,11 +67,23 @@ class Account extends Component {
         }
         return (
             <div className="Character">
-                <b>{character.type}</b><br />
-                Combat Level: <b>{levels.combat}</b><br />
-                Profession Level: <b>{levels.professions}</b><br />
-                Total Level: <b>{levels.total}</b><br />
-                {this.DisplaySkills(character.skills)}
+                <div className="Full">
+                    <img className="ClassFull"
+                        src={"/img/class/full/" + character.type.toLowerCase() + ".webp"}
+                        alt="" />
+                </div>
+                <div className="Name">
+                    <img className="ClassIcon"
+                        src={"/img/class/icon/" + character.type.toLowerCase() + ".webp"}
+                        alt="" />
+                    <b className="Text">{character.type}</b>
+                </div>
+                <div className="Content">
+                    Combat Level: <b>{levels.combat}</b><br />
+                    Profession Level: <b>{levels.professions}</b><br />
+                    Total Level: <b>{levels.total}</b><br />
+                    {this.DisplaySkills(character.skills)}
+                </div>
             </div>
         );
     }
