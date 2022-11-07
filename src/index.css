@@ -5,9 +5,19 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #BAAA80;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.Character {
+  padding: 25px;
+  background-color: #C9B88B;
+  border-left: 5px solid #624E3C;
+  border-top: 1px solid #624E3C;
+  border-bottom: 1px solid #624E3C;
+  border-radius: 3px;
 }
