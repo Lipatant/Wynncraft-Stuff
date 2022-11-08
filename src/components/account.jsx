@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 
+function FirstUppercase(string) {
+    return (string.charAt(0).toUpperCase() + string.slice(1).toLowerCase());
+}
+
 class Account extends Component {
     state = {
         loading: true,
@@ -7,7 +11,9 @@ class Account extends Component {
     };
 
     async componentDidMount() {
-        const url = "https://api.wynncraft.com/v2/player/JajmeLesLjcornes/stats";
+        if (this.props === null || this.props.userName === null)
+            return;
+        const url = "https://api.wynncraft.com/v2/player/"+this.props.userName+"/stats";
         const response = await fetch(url);
         const data = await response.json();
 
@@ -50,7 +56,34 @@ class Account extends Component {
         )
     };
 
+    DisplayGamemodes = (gamemode) => {
+        const gamemodeList = [];
+
+        if (gamemode === null)
+            return;
+        for (const [gamemodeId, gamemodeActive] of Object.entries(gamemode))
+            if (gamemodeActive)
+                gamemodeList.push(
+                    <img className="GamemodeIcon"
+                        src={"/img/gamemodes/" + gamemodeId.toLowerCase() + ".webp"}
+                        alt={FirstUppercase(gamemodeId)} />);
+        if (gamemodeList.length >= 1) {
+            gamemodeList.unshift(" (+");
+            gamemodeList.push(")");
+        }
+        return (gamemodeList);
+    }
+
     DisplayCharacter = (characterId, character) => {
+        const textureNameAliases = {
+            "hunter": "archer",
+            "knight": "warrior",
+            "ninja": "assassin",
+            "darkwizard": "mage",
+            "skyseer": "shaman",
+        }
+        let textureName = "";
+        let characterName = "";
         const levels = {
             combat: 0,
             professions: 0,
@@ -58,6 +91,14 @@ class Account extends Component {
         };
 
         if (characterId === "");
+        textureName = character.type.toLowerCase();
+        for (const [textureNameOriginal, textureNameAlias] of Object.entries(textureNameAliases)) {
+            if (textureName === textureNameOriginal)
+                textureName = textureNameAlias;
+        }
+        characterName = character.type.charAt(0).toUpperCase() + character.type.slice(1).toLowerCase();
+        if (characterName.toUpperCase() === "DARKWIZARD")
+            characterName = "Dark Wizard";
         for (const [profession, professionData] of Object.entries(character.professions)) {
             if (profession === "combat")
                 levels.combat += professionData.level;
@@ -69,14 +110,17 @@ class Account extends Component {
             <div className="Character">
                 <div className="Full">
                     <img className="ClassFull"
-                        src={"/img/class/full/" + character.type.toLowerCase() + ".webp"}
+                        src={"/img/class/full/" + textureName.toLowerCase() + ".webp"}
                         alt="" />
                 </div>
                 <div className="Name">
                     <img className="ClassIcon"
-                        src={"/img/class/icon/" + character.type.toLowerCase() + ".webp"}
+                        src={"/img/class/icon/" + textureName.toLowerCase() + ".webp"}
                         alt="" />
-                    <b className="Text">{character.type}</b>
+                    <any className="Text">
+                        <b>- {characterName}</b>
+                        {this.DisplayGamemodes(character.gamemode)}
+                    </any>
                 </div>
                 <div className="Content">
                     Combat Level: <b>{levels.combat}</b><br />
@@ -101,8 +145,12 @@ class Account extends Component {
             );
         return (
             <div className="Account">
-                <h2>{accountData.username}</h2>
-                Characters:<br /><br />
+                <h2 className="UserName">
+                    <img className="FullSkin"
+                        src={"https://visage.surgeplay.com/full/512/" + accountData.uuid}
+                        alt="" />
+                    - {accountData.username}
+                </h2>
                 {characterList}
             </div>
         );
