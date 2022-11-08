@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import GraphBar from './graphBar';
 
 function FirstUppercase(string) {
     return (string.charAt(0).toUpperCase() + string.slice(1).toLowerCase());
@@ -13,7 +14,7 @@ class Account extends Component {
     async componentDidMount() {
         if (this.props === null || this.props.userName === null)
             return;
-        const url = "https://api.wynncraft.com/v2/player/"+this.props.userName+"/stats";
+        const url = "https://api.wynncraft.com/v2/player/" + this.props.userName + "/stats";
         const response = await fetch(url);
         const data = await response.json();
 
@@ -22,12 +23,13 @@ class Account extends Component {
 
     DisplaySkills = (skills) => {
         const skillDataList = {
-            strength: { display: "Strenght", color: "bg-success", style: { width: "0%" } },
-            dexterity: { display: "Dexterity", color: "bg-info", style: { width: "0%" } },
-            intelligence: { display: "Intelligence", color: "bg-warning", style: { width: "0%" } },
-            defence: { display: "Defence", color: "bg-danger", style: { width: "0%" } },
-            agility: { display: "Agility", color: null, style: { width: "0%" } },
+            strength: { display: "Strenght", style: { width: "0%", "background-color": "green" } },
+            dexterity: { display: "Dexterity", style: { width: "0%", "background-color": "yellow" } },
+            intelligence: { display: "Intelligence", style: { width: "0%", "background-color": "cyan" } },
+            defence: { display: "Defence", style: { width: "0%", "background-color": "red" } },
+            agility: { display: "Agility", style: { width: "0%", "background-color": "white" } },
         };
+        const skillDataGraphBar = [];
         const skillList = [];
         let skillTotal = 0;
 
@@ -36,19 +38,19 @@ class Account extends Component {
                 if (skillId === skillDataId)
                     skillTotal += skillValue;
         for (const [skillId, skillValue] of Object.entries(skills)) {
-            for (const [skillDataId, skillData] of Object.entries(skillDataList)) {
-                if (skillId === skillDataId) {
-                    skillList.push(
-                        <li key={skillId}>
-                            {skillData.display}: <b>{skillValue}</b>
-                        </li>
-                    );
-                }
+            if (skillId in skillDataList) {
+                skillList.push(
+                    <li key={skillId}>
+                        {skillDataList[skillId].display}: <b>{skillValue}</b>
+                    </li>);
+                skillDataList[skillId].style.width = String(skillValue / skillTotal * 100) + "%";
+                skillDataGraphBar.push(skillDataList[skillId].style);
             }
         };
         return (
             <div className="Skils">
                 Skill Points: <b>{skillTotal}</b>
+                <GraphBar width="200px" border="2px solid #624E3C" border-radius="2px" box-shadow="rgba(0, 0, 0, 0.35) 0px 5px 15px" data={skillDataGraphBar} />
                 <ul>
                     {skillList}
                 </ul>
@@ -117,10 +119,10 @@ class Account extends Component {
                     <img className="ClassIcon"
                         src={"/img/class/icon/" + textureName.toLowerCase() + ".webp"}
                         alt="" />
-                    <any className="Text">
+                    <b className="Text">
                         <b>- {characterName}</b>
                         {this.DisplayGamemodes(character.gamemode)}
-                    </any>
+                    </b>
                 </div>
                 <div className="Content">
                     Combat Level: <b>{levels.combat}</b><br />
@@ -136,6 +138,7 @@ class Account extends Component {
         if (accountData === null)
             return;
         const characterList = [];
+        let accountTag = "DEFAULT";
 
         for (const [characterId, character] of Object.entries(accountData.characters))
             characterList.push(
@@ -143,10 +146,12 @@ class Account extends Component {
                     {this.DisplayCharacter(characterId, character)}<br />
                 </div>
             );
+        if (accountData.meta !== null && accountData.meta.tag !== null && accountData.meta.tag.value !== null)
+            accountTag = accountData.meta.tag.value.toUpperCase().replace("+", "p");
         return (
             <div className="Account">
                 <h2 className="UserName">
-                    <img className="FullSkin"
+                    <img className={"FullSkin " + accountTag}
                         src={"https://visage.surgeplay.com/full/512/" + accountData.uuid}
                         alt="" />
                     - {accountData.username}

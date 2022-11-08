@@ -13,11 +13,11 @@ code {
     monospace;
 }
 
-div .left {
+.float-left {
   float: left;
 }
 
-div .right {
+.float-right {
   float: left;
 }
 
@@ -34,6 +34,26 @@ div .right {
   height: 2em;
 }
 
+.Account .DEFAULT {
+  filter: drop-shadow(0 0 5px black);
+}
+
+.Account .VIP {
+  filter: drop-shadow(0 0 5px green);
+}
+
+.Account .VIPp {
+  filter: drop-shadow(0 0 5px cyan);
+}
+
+.Account .HERO {
+  filter: drop-shadow(0 0 5px purple);
+}
+
+.Account .CHAMPION {
+  filter: drop-shadow(0 0 5px yellow);
+}
+
 .Character {
   padding: 25px;
   background-color: #C9B88B;
@@ -46,6 +66,7 @@ div .right {
   grid-template-rows: 0fr 1fr;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .Character .Full {
@@ -54,6 +75,7 @@ div .right {
   border: 2px solid #624E3C;
   border-radius: 5px;
   background-color: #BAAA80;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px inset;
 }
 
 .Character .Full .ClassFull {
@@ -85,6 +107,7 @@ div .right {
 .Character .Name .ClassIcon {
   max-height: 100%;
   max-width: 100%;
+  filter: drop-shadow(0 0 5px black);
 }
 
 .Character .Content {
