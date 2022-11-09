@@ -4,12 +4,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 
-import Velib from './pages/profile';
+import Profile from './pages/profile';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Velib />
+    <Profile />
   </React.StrictMode>
 );
 

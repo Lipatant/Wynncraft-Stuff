@@ -1,8 +1,6 @@
 import { Component } from 'react';
 
 class GraphBar extends Component {
-    state = {};
-
     getSingleStyle = (data) => {
         let style = {
             "height": "100%",
@@ -18,8 +16,6 @@ class GraphBar extends Component {
 
     getWrapperStyle = () => {
         let style = {
-            "height": "1em",
-            "width": "1em",
             "backgroundColor": "black",
         };
 
@@ -37,13 +33,15 @@ class GraphBar extends Component {
         if ("data" in this.props && this.props.data != null) {
             this.props.data.forEach(element => {
                 graphList.push(
-                    <div key={String(identifier)} className={element.className} style={this.getSingleStyle(element)} />
+                    <div key={String(identifier)}
+                        className={"GraphBarSegment " + ("className" in element ? element.className : "")}
+                        style={this.getSingleStyle(element)}>{"content" in element ? element.content : ""}</div>
                 );
-                console.log(element.className);
                 identifier += 1;
             });
         }
-        return (<div style={this.getWrapperStyle()}>
+        return (<div className={"GraphBar " + ("className" in this.props ? this.props.className : "")}
+            style={this.getWrapperStyle()}>
             {graphList}
         </div>);
     }
