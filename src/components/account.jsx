@@ -23,11 +23,11 @@ class Account extends Component {
 
     DisplaySkills = (skills) => {
         const skillDataList = {
-            strength: { display: "Strenght", style: { width: "0%", "background-color": "green" } },
-            dexterity: { display: "Dexterity", style: { width: "0%", "background-color": "yellow" } },
-            intelligence: { display: "Intelligence", style: { width: "0%", "background-color": "cyan" } },
-            defence: { display: "Defence", style: { width: "0%", "background-color": "red" } },
-            agility: { display: "Agility", style: { width: "0%", "background-color": "white" } },
+            strength: { display: "Strenght", style: { width: "0%", "backgroundColor": "green" } },
+            dexterity: { display: "Dexterity", style: { width: "0%", "backgroundColor": "yellow" } },
+            intelligence: { display: "Intelligence", style: { width: "0%", "backgroundColor": "cyan" } },
+            defence: { display: "Defence", style: { width: "0%", "backgroundColor": "red" } },
+            agility: { display: "Agility", style: { width: "0%", "backgroundColor": "white" } },
         };
         const skillDataGraphBar = [];
         const skillList = [];
@@ -50,7 +50,7 @@ class Account extends Component {
         return (
             <div className="Skils">
                 Skill Points: <b>{skillTotal}</b>
-                <GraphBar width="200px" border="2px solid #624E3C" border-radius="2px" box-shadow="rgba(0, 0, 0, 0.35) 0px 5px 15px" data={skillDataGraphBar} />
+                <GraphBar width="200px" border="2px solid #624E3C" borderRadius="2px" boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px" data={skillDataGraphBar} />
                 <ul>
                     {skillList}
                 </ul>
@@ -76,6 +76,27 @@ class Account extends Component {
         return (gamemodeList);
     }
 
+    DisplayLevelBar = (level, maxLevel, className) => {
+        const data = [
+            {
+                "height": String((1 - level / maxLevel) * 100) + "%",
+                "width": "100%",
+                "backgroundColor": "none",
+            },
+            {
+                "height": String(level / maxLevel * 100) + "%",
+                "width": "100%",
+                "className": "FullPart",
+            },
+        ]
+
+        return (
+            <div className={className}>
+                <GraphBar height="100%" backgroundColor="none" data={data} />
+            </div>
+        );
+    }
+
     DisplayCharacter = (characterId, character) => {
         const textureNameAliases = {
             "hunter": "archer",
@@ -88,7 +109,9 @@ class Account extends Component {
         let characterName = "";
         const levels = {
             combat: 0,
+            combatMax: 0,
             professions: 0,
+            professionsMax: 0,
             total: 0,
         };
 
@@ -102,14 +125,19 @@ class Account extends Component {
         if (characterName.toUpperCase() === "DARKWIZARD")
             characterName = "Dark Wizard";
         for (const [profession, professionData] of Object.entries(character.professions)) {
-            if (profession === "combat")
+            if (profession === "combat") {
                 levels.combat += professionData.level;
-            else
+                levels.combatMax += 106;
+            } else {
                 levels.professions += professionData.level;
+                levels.professionsMax += 132;
+            }
             levels.total += professionData.level;
         }
         return (
             <div className="Character">
+                {this.DisplayLevelBar(levels.combat, levels.combatMax, "CombatLevelBar")}
+                {this.DisplayLevelBar(levels.professions, levels.professionsMax, "ProfessionLevelBar")}
                 <div className="Full">
                     <img className="ClassFull"
                         src={"/img/class/full/" + textureName.toLowerCase() + ".webp"}
