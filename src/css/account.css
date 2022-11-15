@@ -1,0 +1,32 @@
+.Account .UserName {
+  font-family: 'MedievalSharp';
+  font-size: xx-large;
+}
+
+.Account .Face {
+  height: 1em;
+}
+
+.Account .FullSkin {
+  height: 2em;
+}
+
+.Account .DEFAULT {
+  filter: drop-shadow(0 0 5px black);
+}
+
+.Account .VIP {
+  filter: drop-shadow(0 0 5px green);
+}
+
+.Account .VIPp {
+  filter: drop-shadow(0 0 5px cyan);
+}
+
+.Account .HERO {
+  filter: drop-shadow(0 0 5px purple);
+}
+
+.Account .CHAMPION {
+  filter: drop-shadow(0 0 5px yellow);
+}

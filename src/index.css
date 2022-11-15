@@ -13,6 +13,9 @@ code {
     monospace;
 }
 
+@import url("css/account.css");
+@import url("css/character.css");
+
 .float-left {
   float: left;
 }
@@ -21,153 +24,30 @@ code {
   float: left;
 }
 
-.Account .UserName {
-  font-family: 'MedievalSharp';
-  font-size: xx-large;
-}
-
-.Account .Face {
-  height: 1em;
-}
-
-.Account .FullSkin {
-  height: 2em;
-}
-
-.Account .DEFAULT {
-  filter: drop-shadow(0 0 5px black);
-}
-
-.Account .VIP {
-  filter: drop-shadow(0 0 5px green);
-}
-
-.Account .VIPp {
-  filter: drop-shadow(0 0 5px cyan);
-}
-
-.Account .HERO {
-  filter: drop-shadow(0 0 5px purple);
-}
-
-.Account .CHAMPION {
-  filter: drop-shadow(0 0 5px yellow);
-}
-
-.Character {
-  padding: 25px;
+.Window {
   background-color: #C9B88B;
+}
+
+.UserNameSearchBar {
+  padding: 25px;
   border-left: 5px solid #624E3C;
   border-top: 1px solid #624E3C;
   border-bottom: 1px solid #624E3C;
   border-radius: 3px;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(min-content, max-content)) minmax(min-content, 150px) 1fr;
-  grid-template-rows: 0fr 1fr;
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.Character .CombatLevelBar {
-  grid-area: 1 / 1 / 3 / 2;
-  width: 1em;
-  border: 2px solid #624E3C;
+.UserNameSearchBar input {
+  border: transparent;
+  padding-left: 5px;
+  border-left: 3px solid #624E3C;
   border-radius: 5px;
+  background-color: transparent;
+  font-size: large;
+}
+
+.UserNameSearchBar input:focus {
   background-color: #BAAA80;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px inset;
-}
-
-.Character .CombatLevelBar .FullPart{
-  background-color: #4A732C;
-}
-
-.Character .ProfessionLevelBar {
-  grid-area: 1 / 2 / 3 / 3;
-  width: 1em;
-  border: 2px solid #624E3C;
-  border-radius: 5px;
-  background-color: #BAAA80;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px inset;
-}
-
-.Character .ProfessionLevelBar .FullPart{
-  background-color: #2F2C73;
-}
-
-.Character .SkillsLevelBar {
-  grid-area: 1 / 3 / 3 / 4;
-  width: 1em;
-  border: 2px solid #624E3C;
-  border-radius: 5px;
-  background-color: #BAAA80;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px inset;
-}
-
-.Character .CombatLevelBar,
-.Character .ProfessionLevelBar,
-.Character .SkillsLevelBar {
-  transition: 0.5s;
-}
-
-.Character .CombatLevelBar:hover,
-.Character .ProfessionLevelBar:hover,
-.Character .SkillsLevelBar:hover {
-  width: 2em;
-}
-
-.Character .Full {
-  display: flex;
-  grid-area: 1 / 4 / 3 / 5;
-  border: 2px solid #624E3C;
-  border-radius: 5px;
-  height: 100%;
-  background-color: #BAAA80;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px inset;
-}
-
-.Character .Full .ClassFull {
-  object-fit: cover;
-  width: 100%;
-  max-height: 100%;
-  transition: transform .1s;
-}
-
-.Character .Full .ClassFull:hover {
-  filter: drop-shadow(0 0 5px white);
-}
-
-.Character .Name {
-  grid-area: 1 / 5 / 2 / 6;
-  min-height: 80px;
-}
-
-.Character .Name .Text {
-  position: absolute;
-  margin-top: 2.7vh;
-  vertical-align: middle;
-  text-align: center;
-  font-family: 'MedievalSharp';
-  font-size: xx-large;
-}
-
-.Character .Name .GamemodeIcon {
-  image-rendering: pixelated;
-  height: 1em;
-}
-
-.Character .Name .ClassIcon {
-  max-height: 100%;
-  max-width: 100%;
-  filter: drop-shadow(0 0 5px black);
-}
-
-.Character .Name .ClassIcon:hover {
-  filter: drop-shadow(0 0 10px white);
-}
-
-.Character .Content {
-  grid-area: 2 / 5 / 3 / 6;
 }
 
 .SkillsLevelBar .STRENGTH {
@@ -204,6 +84,7 @@ code {
 
 .LevelBar .GraphBarSegment:hover {
   box-shadow: 0 0 5px rgb(0, 0, 0, 0.5) inset;
+  font-weight: bold;
 }
 
 .LevelBar:hover {
