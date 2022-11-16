@@ -16,7 +16,6 @@ class GraphBar extends Component {
 
     getWrapperStyle = () => {
         let style = {
-            "backgroundColor": "black",
         };
 
         if (this.props === null) return style;

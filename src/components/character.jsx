@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ClassImg from './classImg';
 import GraphBar from './graphBar';
+import ProfessionElement from './profession/element';
 import SkillsLevelBar from './skills/levelBar';
 
 function FirstUppercase(string) {
@@ -106,6 +107,7 @@ class Character extends Component {
             professionsMax: 0,
             total: 0,
         };
+        const professionList = [];
 
         if (characterId === "");
         textureName = character.type.toLowerCase();
@@ -121,13 +123,14 @@ class Character extends Component {
                 levels.combat += professionData.level;
                 levels.combatMax += 106;
             } else {
+                professionList.push(<ProfessionElement profession={profession} professionLevel={professionData.level} />);
                 levels.professions += professionData.level;
                 levels.professionsMax += 132;
             }
             levels.total += professionData.level;
         }
         return (
-            <div className={"Window Character "+this.state.display} onClick={this.ClickCharacterWindow}>
+            <div className={"Window Character " + this.state.display} onClick={this.ClickCharacterWindow}>
                 {this.DisplayLevelBar(levels.combat, levels.combatMax, "CombatLevelBar")}
                 {this.DisplayLevelBar(levels.professions, levels.professionsMax, "ProfessionLevelBar")}
                 <SkillsLevelBar skills={character.skills} />
@@ -146,6 +149,9 @@ class Character extends Component {
                     Profession Level: <b>{levels.professions}</b><br />
                     Total Level: <b>{levels.total}</b><br />
                     {this.DisplaySkills(character.skills)}
+                    <div className="ProfessionList">
+                        {professionList}
+                    </div>
                 </div>
             </div>
         );
