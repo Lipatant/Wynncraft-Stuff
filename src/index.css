@@ -28,6 +28,11 @@ code {
   background-color: #C9B88B;
 }
 
+.Window:hover {
+  transition: box-shadow .2s ease-in-out;
+  box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+}
+
 .UserNameSearchBar {
   padding: 25px;
   border-left: 5px solid #624E3C;
@@ -44,6 +49,7 @@ code {
   border-radius: 5px;
   background-color: transparent;
   font-size: large;
+  transition: background-color .1s linear;
 }
 
 .UserNameSearchBar input:focus {

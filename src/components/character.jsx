@@ -130,11 +130,11 @@ class Character extends Component {
             levels.total += professionData.level;
         }
         return (
-            <div className={"Window Character " + this.state.display} onClick={this.ClickCharacterWindow}>
+            <div className={"Window Character " + this.state.display}>
                 {this.DisplayLevelBar(levels.combat, levels.combatMax, "CombatLevelBar")}
                 {this.DisplayLevelBar(levels.professions, levels.professionsMax, "ProfessionLevelBar")}
                 <SkillsLevelBar skills={character.skills} />
-                <div className="Full">
+                <div className="Full" onClick={this.ClickCharacterWindow}>
                     <ClassImg className="ClassFull" file="/full/%.webp" classId={character.type} />
                 </div>
                 <div className="Name">
@@ -145,16 +145,16 @@ class Character extends Component {
                     </b>
                 </div>
                 <div className="Content">
-                    Combat Level: <b>{levels.combat}</b><br />
-                    Profession Level: <b>{levels.professions}</b><br />
-                    Total Level: <b>{levels.total}</b><br />
-                    {this.DisplaySkills(character.skills)}
                     <div className="ProfessionList">
                         {professionList}
                     </div>
                 </div>
             </div>
         );
+        /* Combat Level: <b>{levels.combat}</b><br />
+        Profession Level: <b>{levels.professions}</b><br />
+        Total Level: <b>{levels.total}</b><br />
+        {this.DisplaySkills(character.skills)} */
     }
 
     render() {

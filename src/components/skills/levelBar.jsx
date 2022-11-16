@@ -2,6 +2,13 @@ import { Component } from 'react';
 import GraphBar from '../graphBar';
 
 function CreateBarData(skillId, skillValue, skillsTotal) {
+    const skillSymbols = {
+        "strength": "✤",
+        "dexterity": "✦",
+        "intelligence": "❉",
+        "defence": "✹",
+        "agility": "❋",
+    }
     let style = {};
 
     style.className = skillId.toUpperCase();
@@ -10,7 +17,7 @@ function CreateBarData(skillId, skillValue, skillsTotal) {
     else
         style.height = "0px";
     if (skillValue > 0)
-        style.content = String(skillValue);
+        style.content = String(skillValue) + (skillId in skillSymbols ? skillSymbols[skillId] : "");
     return style;
 }
 
@@ -37,7 +44,6 @@ class SkillsLevelBar extends Component {
         return (
             <GraphBar className={"LevelBar SkillsLevelBar " + ("className" in this.props ? this.props.className : "")}
                 height="100%"
-                backgroundColor="none"
                 data={dataList}
             />
         );
