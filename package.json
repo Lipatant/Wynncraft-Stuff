@@ -2,7 +2,7 @@
   "name": "wynncraft-stuff",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://Lipatant.github.io",
+  "homepage": "https://lipatant.github.io",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
