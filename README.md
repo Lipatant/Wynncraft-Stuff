@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# Wynncraft Stuff
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Wynncraft Stuff is an app that allows you to view a [Wynncraft](https://wynncraft.com/) account.
+
+It features 3 bars, one for the combat level, one for the profession level and the last for the stats distribution.
+
+In addition to that, users can visualize their profession levels with another menu containing smaller bars.
 
 ## Available Scripts
 
@@ -39,32 +43,8 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Credits
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This projet was made by [Virgile (Lipatant) Berrier](https://github.com/Lipatant/) thanks to the [Wynncraft API](https://github.com/Wynncraft/WynncraftAPI).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+All the assets were taken from the official [Wynncraft website](https://wynncraft.com/). Same for the color palette.
