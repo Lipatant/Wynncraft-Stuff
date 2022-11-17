@@ -135,10 +135,10 @@ class Character extends Component {
                 {this.DisplayLevelBar(levels.professions, levels.professionsMax, "ProfessionLevelBar")}
                 <SkillsLevelBar skills={character.skills} />
                 <div className="Full" onClick={this.ClickCharacterWindow}>
-                    <ClassImg className="ClassFull" file="full/%.webp" classId={character.type} />
+                    <ClassImg className="ClassFull" file="/full/%.webp" classId={character.type} />
                 </div>
                 <div className="Name">
-                    <ClassImg className="ClassIcon" file="icon/%.webp" classId={character.type} href="https://wynncraft.com/help/classes?class=%" />
+                    <ClassImg className="ClassIcon" file="/icon/%.webp" classId={character.type} href="https://wynncraft.com/help/classes?class=%" />
                     <b className="Text">
                         <b>- {characterName}</b>
                         {this.DisplayGamemodes(character.gamemode)}

@@ -30,14 +30,14 @@ class ClassImg extends Component {
             return (
                 <a href={this.props.href.replace("%", RemoveClassSkin(this.props.classId))} target="_blank" rel="noreferrer">
                     <img className={"className" in this.props ? this.props.className : ""}
-                        src={"/img/class/" + this.props.file.replace("%", RemoveClassSkin(this.props.classId))}
+                        src={"img/class/" + this.props.file.replace("%", RemoveClassSkin(this.props.classId))}
                         alt="" />
                 </a>
             );
         }
         return (
             <img className={"className" in this.props ? this.props.className : ""}
-                src={"/img/class/" + this.props.file.replace("%", RemoveClassSkin(this.props.classId))}
+                src={"img/class/" + this.props.file.replace("%", RemoveClassSkin(this.props.classId))}
                 alt="" />
         );
     }
