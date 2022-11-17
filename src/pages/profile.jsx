@@ -17,7 +17,7 @@ function NoPage() {
 
     return (
         <span>
-            <form className="Window UserNameSearchBar" action="/" method="get">
+            <form className="Window UserNameSearchBar" action="/Wynncraft-Stuff" method="get">
                 <label>
                 </label>
                 <input
