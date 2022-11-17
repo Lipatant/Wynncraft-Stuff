@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.6436949a.css",
-    "main.js": "/static/js/main.5af0722e.js",
-    "static/js/787.39f9f438.chunk.js": "/static/js/787.39f9f438.chunk.js",
-    "index.html": "/index.html",
-    "main.6436949a.css.map": "/static/css/main.6436949a.css.map",
-    "main.5af0722e.js.map": "/static/js/main.5af0722e.js.map",
-    "787.39f9f438.chunk.js.map": "/static/js/787.39f9f438.chunk.js.map"
+    "main.css": "/Wynncraft-Stuff/static/css/main.6436949a.css",
+    "main.js": "/Wynncraft-Stuff/static/js/main.80b32190.js",
+    "static/js/787.39f9f438.chunk.js": "/Wynncraft-Stuff/static/js/787.39f9f438.chunk.js",
+    "index.html": "/Wynncraft-Stuff/index.html",
+    "main.6436949a.css.map": "/Wynncraft-Stuff/static/css/main.6436949a.css.map",
+    "main.80b32190.js.map": "/Wynncraft-Stuff/static/js/main.80b32190.js.map",
+    "787.39f9f438.chunk.js.map": "/Wynncraft-Stuff/static/js/787.39f9f438.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6436949a.css",
-    "static/js/main.5af0722e.js"
+    "static/js/main.80b32190.js"
   ]
 }
