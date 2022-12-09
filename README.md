@@ -6,6 +6,8 @@ It features 3 bars, one for the combat level, one for the profession level and t
 
 In addition to that, users can visualize their profession levels with another menu containing smaller bars.
 
+If you want to pick view account, you can use the homepage to pick a random online player.
+
 ## Available Scripts
 
 In the project directory, you can run:
