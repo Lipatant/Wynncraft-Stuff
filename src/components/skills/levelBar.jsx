@@ -18,6 +18,8 @@ function CreateBarData(skillId, skillValue, skillsTotal) {
         style.height = "0px";
     if (skillValue > 0)
         style.content = String(skillValue) + (skillId in skillSymbols ? skillSymbols[skillId] : "");
+    else
+        return null;
     return style;
 }
 
@@ -38,8 +40,11 @@ class SkillsLevelBar extends Component {
             if (skillsDataList.includes(skillId))
                 skillsTotal += skillValue
         for (const [skillId, skillValue] of Object.entries(this.props.skills))
-            if (skillsDataList.includes(skillId))
-                dataList.push(CreateBarData(skillId, skillValue, skillsTotal));
+            if (skillsDataList.includes(skillId)) {
+                const element = CreateBarData(skillId, skillValue, skillsTotal);
+                if (element !== null)
+                    dataList.push(element);
+            }
         //
         return (
             <GraphBar className={"LevelBar SkillsLevelBar " + ("className" in this.props ? this.props.className : "")}

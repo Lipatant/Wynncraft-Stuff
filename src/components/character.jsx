@@ -55,7 +55,7 @@ class Character extends Component {
             if (gamemodeActive)
                 gamemodeList.push(
                     <img className="GamemodeIcon"
-                        src={"/img/gamemodes/" + gamemodeId.toLowerCase() + ".webp"}
+                        src={process.env.PUBLIC_URL + "/img/gamemodes/" + gamemodeId.toLowerCase() + ".webp"}
                         alt={FirstUppercase(gamemodeId)} />);
         if (gamemodeList.length >= 1) {
             gamemodeList.unshift(" (+");
@@ -131,9 +131,11 @@ class Character extends Component {
         }
         return (
             <div className={"Window Character " + this.state.display}>
-                {this.DisplayLevelBar(levels.combat, levels.combatMax, "CombatLevelBar")}
-                {this.DisplayLevelBar(levels.professions, levels.professionsMax, "ProfessionLevelBar")}
-                <SkillsLevelBar skills={character.skills} />
+                <div className="LevelBars">
+                    {this.DisplayLevelBar(levels.combat, levels.combatMax, "CombatLevelBar")}
+                    {this.DisplayLevelBar(levels.professions, levels.professionsMax, "ProfessionLevelBar")}
+                    <SkillsLevelBar skills={character.skills} />
+                </div>
                 <div className="Full" onClick={this.ClickCharacterWindow}>
                     <ClassImg className="ClassFull" file="/full/%.webp" classId={character.type} />
                 </div>
@@ -151,11 +153,8 @@ class Character extends Component {
                 </div>
             </div>
         );
-        /* Combat Level: <b>{levels.combat}</b><br />
-        Profession Level: <b>{levels.professions}</b><br />
-        Total Level: <b>{levels.total}</b><br />
-        {this.DisplaySkills(character.skills)} */
     }
+//    <ClassImg className="ClassIcon" file="/icon/%.webp" classId={character.type} href="https://wynncraft.com/help/classes?class=%" />
 
     render() {
         const required = ["character"];

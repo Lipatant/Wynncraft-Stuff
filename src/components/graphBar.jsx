@@ -30,10 +30,18 @@ class GraphBar extends Component {
 
         if (this.props === null) return ("");
         if ("data" in this.props && this.props.data != null) {
+            let first = true
             this.props.data.forEach(element => {
+                let additionalClassName = ""
+
+                if (first)
+                    additionalClassName += "First "
+                if (identifier === this.props.data.length - 1)
+                    additionalClassName += (first ? " Last " : "Last ")
+                first = false
                 graphList.push(
                     <div key={String(identifier)}
-                        className={"GraphBarSegment " + ("className" in element ? element.className : "")}
+                        className={"GraphBarSegment " + additionalClassName + ("className" in element ? element.className : "")}
                         style={this.getSingleStyle(element)}>{"content" in element ? element.content : ""}</div>
                 );
                 identifier += 1;

@@ -1,6 +1,6 @@
 {
   "name": "wynncraft-stuff",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "homepage": "https://lipatant.github.io/Wynncraft-Stuff/",
   "dependencies": {
@@ -42,7 +42,7 @@
       "last 1 safari version"
     ]
   },
-  "author": "Virgile (Lipatant)",
+  "author": "Virgile (Lipatant) Berrier",
   "license": "MIT",
   "devDependencies": {
     "gh-pages": "^4.0.0"

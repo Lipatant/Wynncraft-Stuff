@@ -1,67 +1,70 @@
 .Character {
   padding: 25px;
-  border-left: 5px solid #624E3C;
-  border-top: 1px solid #624E3C;
-  border-bottom: 1px solid #624E3C;
+  border-left: 5px solid var(--secondary-border-color);
+  border-top: 1px solid var(--secondary-border-color);
+  border-bottom: 1px solid var(--secondary-border-color);
   border-radius: 3px;
   display: grid;
-  grid-template-columns: repeat(3, minmax(min-content, max-content)) minmax(min-content, 150px) auto;
+  grid-template-columns: 6em minmax(min-content, 150px) auto;
   grid-template-rows: 0fr min-content;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.Character .CombatLevelBar {
+.Character .LevelBars {
+  display: flex;
   grid-area: 1 / 1 / 3 / 2;
+  width: 100%;
 }
 
-.Character .CombatLevelBar .FullPart {
-  border-radius: 2px;
+.Character .LevelBars .CombatLevelBar .FullPart {
+  border-radius: 0.25em;
   background-color: #4A732C;
 }
 
-.Character .ProfessionLevelBar {
-  grid-area: 1 / 2 / 3 / 3;
-}
-
-.Character .ProfessionLevelBar .FullPart {
-  border-radius: 2px;
+.Character .LevelBars .ProfessionLevelBar .FullPart {
+  border-radius: 0.25em;
   background-color: #2F2C73;
 }
 
-.Character .SkillsLevelBar {
-  grid-area: 1 / 3 / 3 / 4;
+.Character .LevelBars .SkillsLevelBar .GraphBarSegment.First {
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25em;
 }
 
-.Character .SkillsLevelBar .GraphBarSegment {
-  border-radius: 2px;
+.Character .LevelBars .SkillsLevelBar .GraphBarSegment.Last {
+  border-bottom-left-radius: 0.25em;
+  border-bottom-right-radius: 0.25em;
 }
 
-.Character .CombatLevelBar,
-.Character .ProfessionLevelBar,
-.Character .SkillsLevelBar {
-  width: 1em;
-  border: 2px solid #624E3C;
-  border-radius: 5px;
-  background-color: #BAAA80;
+.Character .LevelBars .CombatLevelBar,
+.Character .LevelBars .ProfessionLevelBar,
+.Character .LevelBars .SkillsLevelBar {
+  margin-left: 4px;
+  margin-right: 4px;
+  width: 0.5em;
+  outline: 2px solid var(--secondary-border-color);
+  border-radius: 0.25em;
+  background-color: var(--main-bg-color);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px inset;
-  transition: 0.5s;
+  transition: 0.8s;
+  flex-grow: 1;
 }
 
-.Character .CombatLevelBar:hover,
-.Character .ProfessionLevelBar:hover,
-.Character .SkillsLevelBar:hover {
-  width: 3em;
+.Character .LevelBars .CombatLevelBar:hover,
+.Character .LevelBars .ProfessionLevelBar:hover,
+.Character .LevelBars .SkillsLevelBar:hover {
+  width: 5em;
 }
 
 .Character .Full {
   display: flex;
-  grid-area: 1 / 4 / 3 / 5;
-  border: 2px solid #624E3C;
+  grid-area: 1 / 2 / 3 / 3;
+  outline: 2px solid var(--secondary-border-color);
   border-radius: 5px;
   max-height: 100%;
-  background-color: #BAAA80;
+  background-color: var(--main-bg-color);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px inset;
 }
 
@@ -77,13 +80,13 @@
 }
 
 .Character .Name {
-  grid-area: 1 / 5 / 3 / 6;
+  grid-area: 1 / 3 / 3 / 4;
   min-height: 80px;
   max-height: 80px;
 }
 
 .Character.Big .Name {
-  grid-area: 1 / 5 / 2 / 6;
+  grid-area: 1 / 3 / 2 / 4;
 }
 
 .Character .Name .Text {
@@ -111,7 +114,7 @@
 }
 
 .Character .Content {
-  grid-area: 2 / 5 / 3 / 6;
+  grid-area: 2 / 3 / 3 / 4;
   visibility: hidden;
   font-size: 0px;
   transition: font-size .2s ease-in-out;
@@ -121,9 +124,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 16%));
   grid-column-gap: 0.5em;
-  border: 2px solid #624E3C;
+  outline: 2px solid var(--secondary-border-color);
   border-radius: 5px;
-  background-color: #BAAA80;
+  background-color: var(--main-bg-color);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px inset;
 }
 
@@ -143,19 +146,19 @@
 
 .Character .Content .ProfessionList .ProfessionElement .ProfessionIcon {
   grid-area: 1 / 1 / 3 / 2;
-  outline: #624E3C solid;
+  outline: var(--secondary-border-color) solid;
   outline-width: 0px;
   border-radius: 100%;
   max-height: 2em;
   max-width: 2em;
-  background-color: #624E3C;
+  background-color: var(--secondary-border-color);
   transition: outline-width .2s, background-color .2s linear;
 }
 
 .Character .Content .ProfessionList .ProfessionElement:hover .ProfessionIcon {
-  outline: #624E3C solid;
+  outline: var(--secondary-border-color) solid;
   outline-width: 5px;
-  background-color: #BAAA80;
+  background-color: var(--main-bg-color);
 }
 
 .Character .Content .ProfessionList .ProfessionElement .ProfessionName {
@@ -170,10 +173,10 @@
 .Character .Content .ProfessionList .ProfessionElement .ProfessionBar {
   grid-area: 3 / 1 / 4 / 3;
   width: 1em;
-  border: 2px solid #624E3C;
+  border: 2px solid var(--secondary-border-color);
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  background-color: #C9B88B;
+  background-color: var(--main-bg-color);
 }
 
 .Character .Content .ProfessionList .ProfessionElement .ProfessionBar .GraphBarSegment {
