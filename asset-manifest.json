@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Wynncraft-Stuff/static/css/main.6436949a.css",
-    "main.js": "/Wynncraft-Stuff/static/js/main.0e31d405.js",
+    "main.css": "/Wynncraft-Stuff/static/css/main.824c5af5.css",
+    "main.js": "/Wynncraft-Stuff/static/js/main.32cb0b98.js",
     "static/js/787.39f9f438.chunk.js": "/Wynncraft-Stuff/static/js/787.39f9f438.chunk.js",
     "index.html": "/Wynncraft-Stuff/index.html",
-    "main.6436949a.css.map": "/Wynncraft-Stuff/static/css/main.6436949a.css.map",
-    "main.0e31d405.js.map": "/Wynncraft-Stuff/static/js/main.0e31d405.js.map",
+    "main.824c5af5.css.map": "/Wynncraft-Stuff/static/css/main.824c5af5.css.map",
+    "main.32cb0b98.js.map": "/Wynncraft-Stuff/static/js/main.32cb0b98.js.map",
     "787.39f9f438.chunk.js.map": "/Wynncraft-Stuff/static/js/787.39f9f438.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6436949a.css",
-    "static/js/main.0e31d405.js"
+    "static/css/main.824c5af5.css",
+    "static/js/main.32cb0b98.js"
   ]
 }
