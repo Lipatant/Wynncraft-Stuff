@@ -67,12 +67,12 @@ class Character extends Component {
     DisplayLevelBar = (level, maxLevel, className = "") => {
         const data = [
             {
-                "height": String((1 - level / maxLevel) * 100) + "%",
+                "height": String((1 - (level > maxLevel ? maxLevel : level) / maxLevel) * 100) + "%",
                 "width": "100%",
                 "backgroundColor": "none",
             },
             {
-                "height": String(level / maxLevel * 100) + "%",
+                "height": String((level > maxLevel ? maxLevel : level) / maxLevel * 100) + "%",
                 "width": "100%",
                 "className": "FullPart",
                 "content": (level > 0 ? String(level) : ""),
@@ -121,7 +121,7 @@ class Character extends Component {
         for (const [profession, professionData] of Object.entries(character.professions)) {
             if (profession === "combat") {
                 levels.combat += professionData.level;
-                levels.combatMax += 106;
+                levels.combatMax += 105;
             } else {
                 professionList.push(<ProfessionElement profession={profession} professionLevel={professionData.level} />);
                 levels.professions += professionData.level;
