@@ -33,12 +33,49 @@ class Account extends Component {
             accountTag = accountData.meta.tag.value.toUpperCase().replace("+", "p");
         return (
             <div className="Account">
-                <h2 className="UserName">
-                    <img className={"FullSkin " + accountTag}
-                        src={"https://visage.surgeplay.com/full/512/" + accountData.uuid}
-                        alt="" />
-                    - {accountData.username}
-                </h2>
+                <h1 className={"UserName " + accountTag}>
+                    {accountData.username}
+                </h1>
+                <div className="AccountData">
+                    <div className="AccountDataBox">
+                        <img className="FullSkin DEFAULT"
+                            src={"https://visage.surgeplay.com/full/512/" + accountData.uuid}
+                            alt="" />
+                    </div>
+                    {
+                        ("meta" in accountData && "location" in accountData.meta && accountData.meta.location.online)
+                        ?
+                        <div className="AccountDataBox OnlineStatus">
+                            <img className="OnlineIcon"
+                                src="https://cdn.wynncraft.com/nextgen/guilds/online-image.webp"
+                                alt="Online"/>
+                            <h1>{accountData.meta.location.server}</h1>
+                        </div>
+                        :
+                        ""
+                    }
+                    <div className="AccountDataBox">
+                        <h1>{characterList.length}</h1>
+                        <h2>Characters</h2>
+                    </div>
+                    {
+                        ("guild" in accountData && "name" in accountData.guild && accountData.guild.name !== null)
+                            ?
+                            <div className="AccountDataBox Guild">
+                                <img className="GuildIcon"
+                                    src="https://cdn.wynncraft.com/nextgen/guilds/members-image.webp"
+                                    alt="Guild"/>
+                                <h2>{accountData.guild.name} ({accountData.guild.rank.toLowerCase()})</h2>
+                            </div>
+                            :
+                            ""
+                    }
+                    <div className="AccountDataBox">
+                        <h1>{Math.floor(accountData.meta.playtime / 60)}h played</h1>
+                        <h2>{accountData.global.logins} logins</h2>
+                        <h2>{accountData.global.deaths} deaths</h2>
+                    </div>
+                </div>
                 {characterList}
             </div>
         );

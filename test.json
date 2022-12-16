@@ -1,7 +1,7 @@
 {
     "kind": "wynncraft/player/Lipatant/stats",
     "code": 200,
-    "timestamp": 1667813875748,
+    "timestamp": 1671178328290,
     "version": "2.1.0",
     "data": [
         {
@@ -10,12 +10,12 @@
             "rank": "Player",
             "meta": {
                 "firstJoin": "2022-10-15T17:30:13.512Z",
-                "lastJoin": "2022-11-06T19:47:48.708Z",
+                "lastJoin": "2022-12-15T20:04:36.780Z",
                 "location": {
                     "online": false,
                     "server": null
                 },
-                "playtime": 1121,
+                "playtime": 1711,
                 "tag": {
                     "display": true,
                     "value": "HERO"
@@ -23,11 +23,165 @@
                 "veteran": false
             },
             "characters": {
+                "e241e8be-e42f-4c97-8a80-e17fdab29413": {
+                    "type": "NINJA",
+                    "level": 329,
+                    "dungeons": {
+                        "completed": 5,
+                        "list": [
+                            {
+                                "name": "Infested Pit",
+                                "completed": 2
+                            },
+                            {
+                                "name": "Decrepit Sewers",
+                                "completed": 1
+                            },
+                            {
+                                "name": "Underworld Crypt",
+                                "completed": 2
+                            }
+                        ]
+                    },
+                    "raids": {
+                        "completed": 0,
+                        "list": []
+                    },
+                    "quests": {
+                        "completed": 43,
+                        "list": [
+                            "Misadventure on the Sea",
+                            "The Corrupted Village",
+                            "Lost Tower",
+                            "Recover the Past",
+                            "Dwelling Walls",
+                            "The Dark Descent",
+                            "Cluck Cluck",
+                            "Pit of the Dead",
+                            "Macabre Masquerade ''Hallowynn 2014''",
+                            "Studying the Corrupt",
+                            "Grave Digger",
+                            "Maltic's Well",
+                            "Mini-Quest - Slay Mooshrooms",
+                            "Creeper Infiltration",
+                            "Arachnids' Ascent",
+                            "Stable Story",
+                            "Potion Making",
+                            "Elemental Exercise",
+                            "Mushroom Man",
+                            "Underwater",
+                            "Tunnel Trouble",
+                            "The Sewers of Ragni",
+                            "Mini-Quest - Slay Spiders",
+                            "Infested Plants",
+                            "Cook Assistant",
+                            "Poisoning the Pest",
+                            "King's Recruit",
+                            "Enzan's Brother",
+                            "Mini-Quest - Gather Gudgeon",
+                            "Mini-Quest - Gather Copper",
+                            "Mini-Quest - Gather Oak Logs",
+                            "Mini-Quest - Gather Granite",
+                            "Mini-Quest - Gather Barley",
+                            "Mini-Quest - Gather Wheat",
+                            "Mini-Quest - Gather Birch Logs",
+                            "Mini-Quest - Gather Trout",
+                            "Mini-Quest - Gather Gold",
+                            "Mini-Quest - Gather Gold II",
+                            "Mini-Quest - Gather Willow Logs",
+                            "Mini-Quest - Gather Oats",
+                            "Mini-Quest - Gather Salmon",
+                            "Mini-Quest - Gather Willow Logs II",
+                            "Mini-Quest - Gather Oats II"
+                        ]
+                    },
+                    "itemsIdentified": 0,
+                    "mobsKilled": 4053,
+                    "pvp": {
+                        "kills": 0,
+                        "deaths": 0
+                    },
+                    "blocksWalked": 330027939,
+                    "logins": 30,
+                    "deaths": 15,
+                    "playtime": 278,
+                    "gamemode": {
+                        "craftsman": true,
+                        "hardcore": false,
+                        "ironman": true,
+                        "hunted": false
+                    },
+                    "skills": {
+                        "strength": 0,
+                        "dexterity": 21,
+                        "intelligence": 40,
+                        "defence": 3,
+                        "defense": 3,
+                        "agility": 0
+                    },
+                    "professions": {
+                        "alchemism": {
+                            "level": 27,
+                            "xp": 47.9
+                        },
+                        "armouring": {
+                            "level": 27,
+                            "xp": 1.1
+                        },
+                        "combat": {
+                            "level": 33,
+                            "xp": 29.6
+                        },
+                        "cooking": {
+                            "level": 21,
+                            "xp": 50
+                        },
+                        "farming": {
+                            "level": 34,
+                            "xp": 56.1
+                        },
+                        "fishing": {
+                            "level": 32,
+                            "xp": 42.7
+                        },
+                        "jeweling": {
+                            "level": 20,
+                            "xp": 56.6
+                        },
+                        "mining": {
+                            "level": 36,
+                            "xp": 68.9
+                        },
+                        "scribing": {
+                            "level": 21,
+                            "xp": 30.3
+                        },
+                        "tailoring": {
+                            "level": 27,
+                            "xp": 58
+                        },
+                        "weaponsmithing": {
+                            "level": 29,
+                            "xp": 60.4
+                        },
+                        "woodcutting": {
+                            "level": 33,
+                            "xp": 18.8
+                        },
+                        "woodworking": {
+                            "level": 1,
+                            "xp": 0
+                        }
+                    },
+                    "discoveries": 77,
+                    "eventsWon": 0,
+                    "preEconomyUpdate": false
+                },
                 "8c543f89-0d5f-4009-a016-c5379652a3c6": {
                     "type": "SKYSEER",
-                    "level": 256,
+                    "level": 270,
                     "dungeons": {
-                        "completed": 19,
+                        "completed": 22,
                         "list": [
                             {
                                 "name": "Decrepit Sewers",
@@ -51,22 +205,37 @@
                             },
                             {
                                 "name": "Undergrowth Ruins",
+                                "completed": 3
+                            },
+                            {
+                                "name": "Galleon's Graveyard",
                                 "completed": 1
                             }
                         ]
                     },
                     "raids": {
-                        "completed": 5,
+                        "completed": 6,
                         "list": [
                             {
                                 "name": "Nest of the Grootslangs",
                                 "completed": 5
+                            },
+                            {
+                                "name": "Orphion's Nexus of Light",
+                                "completed": 1
                             }
                         ]
                     },
                     "quests": {
-                        "completed": 101,
+                        "completed": 109,
                         "list": [
+                            "The Hidden City",
+                            "Beyond the Grave",
+                            "Mixed Feelings",
+                            "Desperate Metal",
+                            "The Envoy Part I",
+                            "Realm of Light V - The Realm of Light",
+                            "Fallen Delivery",
                             "The Bigger Picture",
                             "Flight in Distress",
                             "Acquiring Credentials",
@@ -126,6 +295,7 @@
                             "Heart of Llevigar",
                             "Mini-Quest - Slay Creatures of Nesaak Forest",
                             "Ice Nations",
+                            "Tower of Ascension",
                             "Clearing the Camps",
                             "Canyon Condor",
                             "Wrath of the Mummy",
@@ -171,15 +341,15 @@
                         ]
                     },
                     "itemsIdentified": 0,
-                    "mobsKilled": 22420,
+                    "mobsKilled": 26042,
                     "pvp": {
                         "kills": 0,
                         "deaths": 0
                     },
-                    "blocksWalked": -1649023740,
-                    "logins": 116,
-                    "deaths": 38,
-                    "playtime": 1121,
+                    "blocksWalked": 104179918,
+                    "logins": 182,
+                    "deaths": 49,
+                    "playtime": 1419,
                     "gamemode": {
                         "craftsman": false,
                         "hardcore": false,
@@ -188,11 +358,11 @@
                     },
                     "skills": {
                         "strength": 0,
-                        "dexterity": 0,
-                        "intelligence": 54,
-                        "defence": 65,
-                        "defense": 65,
-                        "agility": 35
+                        "dexterity": 15,
+                        "intelligence": 49,
+                        "defence": 68,
+                        "defense": 68,
+                        "agility": 44
                     },
                     "professions": {
                         "alchemism": {
@@ -204,8 +374,8 @@
                             "xp": 0
                         },
                         "combat": {
-                            "level": 78,
-                            "xp": 66
+                            "level": 89,
+                            "xp": 10.2
                         },
                         "cooking": {
                             "level": 16,
@@ -220,8 +390,8 @@
                             "xp": 61.7
                         },
                         "jeweling": {
-                            "level": 1,
-                            "xp": 46.6
+                            "level": 4,
+                            "xp": 34.4
                         },
                         "mining": {
                             "level": 29,
@@ -248,31 +418,238 @@
                             "xp": 15.6
                         }
                     },
-                    "discoveries": 312,
+                    "discoveries": 419,
+                    "eventsWon": 0,
+                    "preEconomyUpdate": false
+                },
+                "f4f8a5b7-1768-4a93-b194-24f1e8e7fd72": {
+                    "type": "DARKWIZARD",
+                    "level": 13,
+                    "dungeons": {
+                        "completed": 2,
+                        "list": [
+                            {
+                                "name": "Decrepit Sewers",
+                                "completed": 2
+                            }
+                        ]
+                    },
+                    "raids": {
+                        "completed": 0,
+                        "list": []
+                    },
+                    "quests": {
+                        "completed": 7,
+                        "list": [
+                            "King's Recruit",
+                            "Enzan's Brother",
+                            "Cook Assistant",
+                            "Poisoning the Pest",
+                            "Infested Plants",
+                            "Mini-Quest - Slay Spiders",
+                            "The Sewers of Ragni"
+                        ]
+                    },
+                    "itemsIdentified": 0,
+                    "mobsKilled": 538,
+                    "pvp": {
+                        "kills": 0,
+                        "deaths": 0
+                    },
+                    "blocksWalked": 129586,
+                    "logins": 1,
+                    "deaths": 0,
+                    "playtime": 13,
+                    "gamemode": {
+                        "craftsman": false,
+                        "hardcore": false,
+                        "ironman": false,
+                        "hunted": false
+                    },
+                    "skills": {
+                        "strength": 6,
+                        "dexterity": 0,
+                        "intelligence": 16,
+                        "defence": 0,
+                        "defense": 0,
+                        "agility": 0
+                    },
+                    "professions": {
+                        "alchemism": {
+                            "level": 1,
+                            "xp": 0
+                        },
+                        "armouring": {
+                            "level": 1,
+                            "xp": 0
+                        },
+                        "combat": {
+                            "level": 12,
+                            "xp": 75.6
+                        },
+                        "cooking": {
+                            "level": 1,
+                            "xp": 0
+                        },
+                        "farming": {
+                            "level": 2,
+                            "xp": 39.4
+                        },
+                        "fishing": {
+                            "level": 1,
+                            "xp": 0
+                        },
+                        "jeweling": {
+                            "level": 1,
+                            "xp": 0
+                        },
+                        "mining": {
+                            "level": 1,
+                            "xp": 0
+                        },
+                        "scribing": {
+                            "level": 1,
+                            "xp": 0
+                        },
+                        "tailoring": {
+                            "level": 1,
+                            "xp": 0
+                        },
+                        "weaponsmithing": {
+                            "level": 1,
+                            "xp": 0
+                        },
+                        "woodcutting": {
+                            "level": 1,
+                            "xp": 0
+                        },
+                        "woodworking": {
+                            "level": 1,
+                            "xp": 0
+                        }
+                    },
+                    "discoveries": 12,
+                    "eventsWon": 0,
+                    "preEconomyUpdate": false
+                },
+                "c0a985f0-851d-4831-bc9a-dee871b29372": {
+                    "type": "DARKWIZARD",
+                    "level": 1,
+                    "dungeons": {
+                        "completed": 0,
+                        "list": []
+                    },
+                    "raids": {
+                        "completed": 0,
+                        "list": []
+                    },
+                    "quests": {
+                        "completed": 0,
+                        "list": []
+                    },
+                    "itemsIdentified": 0,
+                    "mobsKilled": 0,
+                    "pvp": {
+                        "kills": 0,
+                        "deaths": 0
+                    },
+                    "blocksWalked": 62,
+                    "logins": 1,
+                    "deaths": 0,
+                    "playtime": 1,
+                    "gamemode": {
+                        "craftsman": false,
+                        "hardcore": false,
+                        "ironman": false,
+                        "hunted": false
+                    },
+                    "skills": {
+                        "strength": 0,
+                        "dexterity": 0,
+                        "intelligence": 0,
+                        "defence": 0,
+                        "defense": 0,
+                        "agility": 0
+                    },
+                    "professions": {
+                        "alchemism": {
+                            "level": 1,
+                            "xp": 0
+                        },
+                        "armouring": {
+                            "level": 1,
+                            "xp": 0
+                        },
+                        "combat": {
+                            "level": 1,
+                            "xp": 0
+                        },
+                        "cooking": {
+                            "level": 1,
+                            "xp": 0
+                        },
+                        "farming": {
+                            "level": 1,
+                            "xp": 0
+                        },
+                        "fishing": {
+                            "level": 1,
+                            "xp": 0
+                        },
+                        "jeweling": {
+                            "level": 1,
+                            "xp": 0
+                        },
+                        "mining": {
+                            "level": 1,
+                            "xp": 0
+                        },
+                        "scribing": {
+                            "level": 1,
+                            "xp": 0
+                        },
+                        "tailoring": {
+                            "level": 1,
+                            "xp": 0
+                        },
+                        "weaponsmithing": {
+                            "level": 1,
+                            "xp": 0
+                        },
+                        "woodcutting": {
+                            "level": 1,
+                            "xp": 0
+                        },
+                        "woodworking": {
+                            "level": 1,
+                            "xp": 0
+                        }
+                    },
+                    "discoveries": 0,
                     "eventsWon": 0,
                     "preEconomyUpdate": false
                 }
             },
             "guild": {
-                "name": null,
-                "rank": null
+                "name": "KongoBoys",
+                "rank": "RECRUIT"
             },
             "global": {
-                "blocksWalked": -1649023740,
+                "blocksWalked": 434337505,
                 "itemsIdentified": 0,
-                "mobsKilled": 22420,
+                "mobsKilled": 30633,
                 "totalLevel": {
-                    "combat": 78,
-                    "profession": 190,
-                    "combined": 268
+                    "combat": 135,
+                    "profession": 526,
+                    "combined": 661
                 },
                 "pvp": {
                     "kills": 0,
                     "deaths": 0
                 },
-                "logins": 116,
-                "deaths": 38,
-                "discoveries": 312,
+                "logins": 214,
+                "deaths": 64,
+                "discoveries": 508,
                 "eventsWon": 0
             },
             "ranking": {

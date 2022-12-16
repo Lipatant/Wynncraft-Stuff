@@ -114,7 +114,7 @@ code {
 .OnlineBoard {
   display: grid;
   margin: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(min-content, 450px));
+  grid-template-columns: repeat(3, minmax(min-content, 450px));
   gap: 10px;
 }
 

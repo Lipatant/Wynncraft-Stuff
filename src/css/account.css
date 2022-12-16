@@ -1,14 +1,57 @@
+
 .Account .UserName {
+  font-family: 'MedievalSharp';
+  font-size: xx-large;
+  text-align: center;
+}
+
+.Account .AccountData {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.Account .AccountData .AccountDataBox {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 5px solid var(--secondary-border-color);
+  border-top: 1px solid var(--secondary-border-color);
+  border-bottom: 1px solid var(--secondary-border-color);
+  border-radius: 3px;
+  background:
+  linear-gradient(135deg, var(--secondary-bg-color) 21px, var(--main-bg-color) 22px, var(--main-bg-color) 24px, transparent 24px, transparent 67px, var(--main-bg-color) 67px, var(--main-bg-color) 69px, transparent 69px),
+  linear-gradient(225deg, var(--secondary-bg-color) 21px, var(--main-bg-color) 22px, var(--main-bg-color) 24px, transparent 24px, transparent 67px, var(--main-bg-color) 67px, var(--main-bg-color) 69px, transparent 69px)0 64px;
+  background-color: var(--secondary-bg-color);
+  background-size: 64px 128px;
+  min-width: min-content;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin: 5px;
+}
+
+.Account .AccountData h1 {
   font-family: 'MedievalSharp';
   font-size: xx-large;
 }
 
-.Account .Face {
-  height: 1em;
+.Account .AccountData h2 {
+  font-family: 'MedievalSharp';
+  font-size: x-large;
 }
 
-.Account .FullSkin {
-  height: 2em;
+.Account .AccountData .FullSkin {
+  height: 100%;
+}
+
+.Account .AccountData img:not(.FullSkin) {
+  min-height: 1em;
+  height: 50%;
+}
+
+.Account .Face {
+  height: 1em;
 }
 
 .Account .DEFAULT {
