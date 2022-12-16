@@ -56,7 +56,7 @@ class Account extends Component {
                     }
                     <div className="AccountDataBox">
                         <h1>{characterList.length}</h1>
-                        <h2>Characters</h2>
+                        <h2>{characterList.length > 1 ? "Characters" : "Character"}</h2>
                     </div>
                     {
                         ("guild" in accountData && "name" in accountData.guild && accountData.guild.name !== null)
