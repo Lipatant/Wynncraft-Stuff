@@ -71,9 +71,9 @@ class Account extends Component {
                             ""
                     }
                     <div className="AccountDataBox">
-                        <h1>{Math.floor(accountData.meta.playtime / 60) * 0}h played</h1>
-                        <h2>{accountData.global.logins} logins</h2>
-                        <h2>{accountData.global.deaths} deaths</h2>
+                        <h1><u>{Math.floor(accountData.meta.playtime / 60 * 4.7)}h</u> played</h1>
+                        <h2><u>{accountData.global.logins}</u> logins</h2>
+                        <h2><u>{accountData.global.deaths}</u> deaths</h2>
                     </div>
                 </div>
                 {characterList}

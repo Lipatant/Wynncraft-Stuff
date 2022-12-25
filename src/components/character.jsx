@@ -147,6 +147,7 @@ class Character extends Component {
                     </b>
                 </div>
                 <div className="Content">
+                    <h2><u>{Math.floor(character.playtime / 60 * 4.7)}h</u> played, <u>{character.logins}</u> logins and <u>{character.deaths}</u> deaths</h2>
                     <div className="ProfessionList">
                         {professionList}
                     </div>
