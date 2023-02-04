@@ -1,5 +1,11 @@
 import { Component } from 'react';
 
+function TryValue(object, key, defaultValue = "") {
+    if ((typeof object) == "object" && key in object)
+        return object[key];
+    return defaultValue;
+}
+
 class GraphBar extends Component {
     getSingleStyle = (data) => {
         let style = {
@@ -49,6 +55,7 @@ class GraphBar extends Component {
         }
         return (<div className={"GraphBar " + ("className" in this.props ? this.props.className : "")}
             style={this.getWrapperStyle()}>
+            <span>{TryValue(this.props, "span")}</span>
             {graphList}
         </div>);
     }
