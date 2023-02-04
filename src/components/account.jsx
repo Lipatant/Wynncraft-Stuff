@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Character from './character';
+import CharacterCard from './characterCard';
+import ProfessionIcon from './profession/icon';
 
 class Account extends Component {
     state = {
@@ -25,9 +27,8 @@ class Account extends Component {
 
         for (const [characterId, character] of Object.entries(accountData.characters))
             characterList.push(
-                <div>
-                    <Character characterId={characterId} character={character} /><br />
-                </div>
+//                    <><Character characterId={characterId} character={character} /><br /></>
+                <><CharacterCard characterId={characterId} character={character} account={accountData}/><br /></>
             );
         if (accountData.meta !== null && accountData.meta.tag !== null && accountData.meta.tag.value !== null)
             accountTag = accountData.meta.tag.value.toUpperCase().replace("+", "p");
@@ -72,8 +73,8 @@ class Account extends Component {
                     }
                     <div className="AccountDataBox">
                         <h1><u>{Math.floor(accountData.meta.playtime / 60 * 4.7)}h</u> played</h1>
-                        <h2><u>{accountData.global.logins}</u> logins</h2>
-                        <h2><u>{accountData.global.deaths}</u> deaths</h2>
+                        <h2><ProfessionIcon profession="scribing" className="Icon"/> <u>{accountData.global.logins}</u> logins</h2>
+                        <h2><ProfessionIcon profession="fishing" className="Icon"/> <u>{accountData.global.deaths}</u> deaths</h2>
                     </div>
                 </div>
                 {characterList}
@@ -91,22 +92,18 @@ class Account extends Component {
                 this.DisplayAccount(account)
             )
         ));
-        return (
-            <div>
-                {accountList}
-            </div>
-        );
+        return (accountList);
     }
 
     render() {
         return (
-            <div>
+            <>
                 {this.state.loading || !this.state.data ?
                     <>Loading...</>
                     :
                     this.DisplayData()
                 }
-            </div>
+            </>
         );
     }
 }

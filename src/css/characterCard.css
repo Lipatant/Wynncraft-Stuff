@@ -1,0 +1,49 @@
+.CharacterCard {
+    background:
+        linear-gradient(135deg, var(--secondary-bg-color) 21px, var(--main-bg-color) 22px, var(--main-bg-color) 24px, transparent 24px, transparent 67px, var(--main-bg-color) 67px, var(--main-bg-color) 69px, transparent 69px),
+        linear-gradient(225deg, var(--secondary-bg-color) 21px, var(--main-bg-color) 22px, var(--main-bg-color) 24px, transparent 24px, transparent 67px, var(--main-bg-color) 67px, var(--main-bg-color) 69px, transparent 69px)0 64px;
+    background-color: var(--secondary-bg-color);
+    background-size: 64px 128px;
+    height: calc(440px - 20px);
+    width: calc(315px - 20px);
+    border: 10px var(--secondary-border-color) solid;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: grid;
+    grid-template-rows: min-content auto min-content;
+    grid-template-columns: 1fr min-content;
+    padding: 10px;
+}
+
+.CharacterCard:hover {
+    transition: box-shadow .2s ease-in-out;
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+}
+
+.CharacterCard .ClassImg.Illustration {
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    filter: drop-shadow(0 0 5px black);
+}
+
+.CharacterCard .CharacterName {
+    grid-area: 1 / 1 / 2 / 2;
+    font-family: 'MedievalSharp';
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.CharacterCard .ClassImg.Icon {
+    grid-area: 1 / 2 / 2 / 3;
+    width: 80px;
+    background-color: var(--main-bg-color);
+    border: 2px var(--secondary-border-color) solid;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px inset;
+}
+
+.CharacterCard:hover .ClassImg.Icon {
+    transition: box-shadow .2s ease-in-out;
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px inset;
+}

@@ -45,6 +45,12 @@
   height: 50%;
 }
 
+.Account .AccountData img.Icon {
+  height: 1em;
+  border-radius: 20%;
+  background-color: var(--main-bg-color);
+}
+
 .Account .Face {
   height: 1em;
 }

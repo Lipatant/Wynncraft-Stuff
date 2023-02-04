@@ -142,7 +142,7 @@ class Character extends Component {
                 <div className="Name">
                     <ClassImg className="ClassIcon" file="/icon/%.webp" classId={character.type} href="https://wynncraft.com/help/classes?class=%" />
                     <b className="Text">
-                        <b>- {characterName}</b>
+                        <b>{characterName}</b>
                         {this.DisplayGamemodes(character.gamemode)}
                     </b>
                 </div>

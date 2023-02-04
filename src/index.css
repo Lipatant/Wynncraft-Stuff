@@ -23,7 +23,7 @@ code {
 }
 
 @import url("css/account.css");
-@import url("css/character.css");
+@import url("css/characterCard.css");
 
 .float-left {
   float: left;
