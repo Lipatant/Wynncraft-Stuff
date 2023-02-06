@@ -64,6 +64,7 @@ class CharacterCard extends Component {
 
     render() {
         return (
+            <button className="CharacterCardButton" onClick={this.props.nope}>
             <div className={"CharacterCard " + TryValue(this.props, "className")} key={TryValue(this.props, "characterId")}>
                 <CharacterName character={TryValue(this.props, "character", false)} />
                 <CharacterGamemodes character={TryValue(this.props, "character", false)} />
@@ -72,6 +73,7 @@ class CharacterCard extends Component {
                 {this.CombatLevelBar()}
                 <SkillsLevelBar skills={TryInCharacter(this.props, "skills", {})} />
             </div>
+            </button>
         );
     }
 }
