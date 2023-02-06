@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import CharacterGamemodes from './character/gamemodes';
 import CharacterName from './character/name';
 import ClassImg from './classImg';
 import GraphBar from './graphBar';
@@ -65,6 +66,7 @@ class CharacterCard extends Component {
         return (
             <div className={"CharacterCard " + TryValue(this.props, "className")} key={TryValue(this.props, "characterId")}>
                 <CharacterName character={TryValue(this.props, "character", false)} />
+                <CharacterGamemodes character={TryValue(this.props, "character", false)} />
                 <ClassImg className="Icon" classId={TryInCharacter(this.props, "type", "Warrior")} file="https://cdn.wynncraft.com/nextgen/classes/icons/%?.svg" />
                 <ClassImg className="Illustration" classId={TryInCharacter(this.props, "type", "Warrior")} file="https://cdn.wynncraft.com/nextgen/classes/picture/%?_icon.webp" reskins={false} />
                 {this.CombatLevelBar()}

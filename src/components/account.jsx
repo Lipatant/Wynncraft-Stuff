@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Character from './character';
 import CharacterCard from './characterCard';
 import ProfessionIcon from './profession/icon';
 
@@ -23,12 +22,17 @@ class Account extends Component {
         if (accountData === null)
             return;
         const characterList = [];
+        const characterCardWrapperStyle = {
+            "display": "flex",
+            "flexWrap": "wrap",
+            "justifyContent": "center",
+            "alignItems": "center",
+        }
         let accountTag = "DEFAULT";
 
         for (const [characterId, character] of Object.entries(accountData.characters))
             characterList.push(
-//                    <><Character characterId={characterId} character={character} /><br /></>
-                <><CharacterCard characterId={characterId} character={character} account={accountData}/><br /></>
+                <CharacterCard characterId={characterId} character={character} account={accountData} />
             );
         if (accountData.meta !== null && accountData.meta.tag !== null && accountData.meta.tag.value !== null)
             accountTag = accountData.meta.tag.value.toUpperCase().replace("+", "p");
@@ -45,15 +49,15 @@ class Account extends Component {
                     </div>
                     {
                         ("meta" in accountData && "location" in accountData.meta && accountData.meta.location.online)
-                        ?
-                        <div className="AccountDataBox OnlineStatus">
-                            <img className="OnlineIcon"
-                                src="https://cdn.wynncraft.com/nextgen/guilds/online-image.webp"
-                                alt="Online"/>
-                            <h1>{accountData.meta.location.server}</h1>
-                        </div>
-                        :
-                        ""
+                            ?
+                            <div className="AccountDataBox OnlineStatus">
+                                <img className="OnlineIcon"
+                                    src="https://cdn.wynncraft.com/nextgen/guilds/online-image.webp"
+                                    alt="Online" />
+                                <h1>{accountData.meta.location.server}</h1>
+                            </div>
+                            :
+                            ""
                     }
                     <div className="AccountDataBox">
                         <h1>{characterList.length}</h1>
@@ -65,7 +69,7 @@ class Account extends Component {
                             <div className="AccountDataBox Guild">
                                 <img className="GuildIcon"
                                     src="https://cdn.wynncraft.com/nextgen/guilds/members-image.webp"
-                                    alt="Guild"/>
+                                    alt="Guild" />
                                 <h2>{accountData.guild.name} ({accountData.guild.rank.toLowerCase()})</h2>
                             </div>
                             :
@@ -73,11 +77,13 @@ class Account extends Component {
                     }
                     <div className="AccountDataBox">
                         <h1><u>{Math.floor(accountData.meta.playtime / 60 * 4.7)}h</u> played</h1>
-                        <h2><ProfessionIcon profession="scribing" className="Icon"/> <u>{accountData.global.logins}</u> logins</h2>
-                        <h2><ProfessionIcon profession="fishing" className="Icon"/> <u>{accountData.global.deaths}</u> deaths</h2>
+                        <h2><ProfessionIcon profession="scribing" className="Icon" /> <u>{accountData.global.logins}</u> logins</h2>
+                        <h2><ProfessionIcon profession="fishing" className="Icon" /> <u>{accountData.global.deaths}</u> deaths</h2>
                     </div>
                 </div>
-                {characterList}
+                <div className="CharacterCardWrapper" style={characterCardWrapperStyle}>
+                    {characterList}
+                </div>
             </div>
         );
     }

@@ -11,7 +11,7 @@
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 20px;
     display: grid;
-    grid-template-rows: min-content 10px auto min-content min-content;
+    grid-template-rows: min-content min-content 10px auto min-content min-content;
     grid-template-columns: min-content auto 40px min-content;
     column-gap: 2px;
     padding: 10px;
@@ -19,7 +19,7 @@
 
 .CharacterCard:hover {
     transition: box-shadow .2s ease-in-out;
-    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 0px 15px;
 }
 
 .CharacterCard .ClassImg.Illustration {
@@ -34,14 +34,42 @@
 }
 
 .CharacterCard .CharacterName {
-    grid-area: 1 / 1 / 2 / -2;
+    grid-area: 1 / 1 / 3 / -2;
     font-family: 'MedievalSharp';
     font-size: xx-large;
     font-weight: bold;
 }
 
+.CharacterCard .CharacterGamemodeWrapper {
+    grid-area: 2 / 1 / -3 / -1;
+    display: flex;
+    flex-direction: column;
+}
+
+.CharacterCard .CharacterGamemode {
+    width: 40px;
+    image-rendering: pixelated;
+    filter: drop-shadow(0 0 5px black);
+}
+
+.CharacterCard .CharacterGamemode.Hardcore {
+    filter: drop-shadow(0 0 5px #ff5050);
+}
+
+.CharacterCard .CharacterGamemode.Ironman {
+    filter: drop-shadow(0 0 5px #fdb11f);
+}
+
+.CharacterCard .CharacterGamemode.Craftsman {
+    filter: drop-shadow(0 0 5px #21beb0);
+}
+
+.CharacterCard .CharacterGamemode.Hunted {
+    filter: drop-shadow(0 0 5px #ab02e3);
+}
+
 .CharacterCard .ClassImg.Icon {
-    grid-area: 1 / -3 / 2 / -1;
+    grid-area: 1 / -3 / 3 / -1;
     width: 80px;
     background-color: var(--main-bg-color);
     border: 2px var(--secondary-border-color) solid;
@@ -51,7 +79,7 @@
 
 .CharacterCard:hover .ClassImg.Icon {
     transition: box-shadow .2s ease-in-out;
-    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px inset;
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 0px 15px inset;
 }
 
 .CharacterCard .CombatLevelBar,
@@ -101,9 +129,10 @@
 }
 
 .CharacterCard .SkillsLevelBar {
-    grid-area: -1 / -2 / 3 / -1;
+    grid-area: -1 / -2 / 4 / -1;
     outline: 2px var(--secondary-border-color) solid;
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 15px;
 }
 
 .CharacterCard .SkillsLevelBar .GraphBarSegment.First {

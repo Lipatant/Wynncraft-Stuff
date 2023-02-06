@@ -102,12 +102,12 @@ code {
   transition: box-shadow 0.2s ease-in-out, color 0.4s;
 }
 
-.LevelBar .GraphBarSegment:hover {
+.LevelBar.HasLabel .GraphBarSegment:hover {
   box-shadow: 0 0 5px rgb(0, 0, 0, 0.5) inset;
   font-weight: bold;
 }
 
-.LevelBar:hover {
+.LevelBar.HasLabel:hover {
   box-shadow: 0 0 5px white;
 }
 
