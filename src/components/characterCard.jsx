@@ -18,6 +18,10 @@ function TryInCharacter(object, key, defaultValue = "") {
 }
 
 class CharacterCard extends Component {
+    state = {
+        display: "Small",
+    };
+
     CombatLevelBar = () => {
         let combatLevel = 0;
         let professionLevel = 0;
@@ -62,10 +66,16 @@ class CharacterCard extends Component {
         </>;
     }
 
+    ClickCharacterCard = () => {
+        this.setState({
+            display: (this.state.display === "Small" ? "Big" : "Small")
+        })
+    }
+
     render() {
         return (
-            <button className="CharacterCardButton" onClick={this.props.nope}>
-            <div className={"CharacterCard " + TryValue(this.props, "className")} key={TryValue(this.props, "characterId")}>
+            <button className="CharacterCardButton" onClick={this.ClickCharacterCard}>
+            <div className={"CharacterCard " + TryValue(this.props, "className ") + this.state.display} key={TryValue(this.props, "characterId")}>
                 <CharacterName character={TryValue(this.props, "character", false)} />
                 <CharacterGamemodes character={TryValue(this.props, "character", false)} />
                 <ClassImg className="Icon" classId={TryInCharacter(this.props, "type", "Warrior")} file="https://cdn.wynncraft.com/nextgen/classes/icons/%?.svg" />

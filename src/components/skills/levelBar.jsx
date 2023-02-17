@@ -56,7 +56,7 @@ class SkillsLevelBar extends Component {
             }
         //
         return (
-            <GraphBar className={"LevelBar SkillsLevelBar " + (TryValue(this.props, "hasLabel", false) ? "hasLabel " : "") + TryValue(this.props, "className", "")}
+            <GraphBar className={"LevelBar SkillsLevelBar " + (TryValue(this.props, "hasLabel", false) ? "hasLabel " : "") + TryValue(this.props, "className ", "") + (dataList.length > 0 ? "" : "Empty")}
                 height="100%"
                 data={dataList}
             />
